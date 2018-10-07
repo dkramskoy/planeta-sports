@@ -22,7 +22,6 @@ function FormValidation(settings) {
             this.checkValidity(input);
         })
         input.addEventListener('invalid', (event)=>{
-            console.log(1)
             event.preventDefault();
             if(event.target.value.length === 0) {
                 event.target.nextElementSibling.classList.add('error');
@@ -41,9 +40,7 @@ function FormValidation(settings) {
     };
 
     idForm.addEventListener('submit', (event) => {
-        console.log(2)
         event.preventDefault();
-
         for(let input of inputs) {
 
             this.checkValidity(input);
@@ -76,12 +73,10 @@ function FormValidation(settings) {
             }
             else {
                 div.innerHTML = 'Заявка не была отправлена. Попробуйте отправить заново, либо свяжитесь с администратором.';
-                console.log(response.status);
             }
         })
         .catch(function(response) {
             div.innerHTML = 'Произошел сбой сети.';
-            console.log(response.status);
             return;
         })
     });
