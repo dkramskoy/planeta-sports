@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/ico">
+    <title>Планета Спорт</title>
+</head>
+<body>
+
+    <header>
+       <div class="container">
+            <div class="header">
+                <h1>планета спорт</h1>
+                <p>
+                   <span>выберите</span>
+                   <br>
+                   <span>спорткомплекс</span>
+                </p>
+
+                <div class="header_row">
+                    <div>Спорт комплекс</div>
+                    <div>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="header_row">
+                   <form action="" method="get" id="searchform">
+                       <input type="text" placeholder="Поиск">
+                       <button type="submit"><i class="fas fa-search"></i></button>
+                   </form>
+                </div>
+
+                <div class="header_row">
+                    <div>Выберите пункты</div>
+                    <div class="header_checkbox">
+                        <div>
+                            <input type="checkbox" id="header_shower">
+                            <label for="header_shower">Душ</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="header_sauna">
+                            <label for="header_sauna">Сауна</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="header_SPA">
+                            <label for="header_SPA">SPA</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_row">
+                    <span>По цене</span><button><a href="#">применить</a></button>
+                    <div class='slider-container'>
+                            <div id="slider" class="slider">
+                                <div id='price' class='price'></div>
+                                <div class="thumb" data-thumb="left"><span id='thumbLeftNumber'></span></div>
+                                <div class="thumb" data-thumb="right"><span id='thumbRightNumber'></span></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>                    
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="services">
+                <div>
+                    <div>
+                        <div>акции</div>
+                        <div>Прыжки на батутах 100 грн/час*</div>
+                        <div>По субботам</div>
+                    </div>
+                    <span></span>
+                </div>
+                <div>
+                    <div>
+                        <div>акции</div>
+                        <div>Закрытые бассейны 160 грн/час*</div>
+                        <div>Понедельник-пятница, с 05 сентября</div>
+                    </div>
+                    <span></span>
+                </div>
+                <div>
+                    <div>
+                        <div>акции</div>
+                        <div>Детский бассейн на Дарнице 90 грн/занятие*</div>
+                        <div>Понедельник, среда, пятница</div>
+                    </div>
+                    <span></span>
+                </div>
+                <div>
+                    <div>
+                        <div>акции</div>
+                        <div>Абонемент в бассейн на Соломенке 120 грн/час*</div>
+                        <div>Понедельник-пятница, с 11:00 до 16:00</div>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav>
+        <div class="container">
+            <div class="nav_center">
+                <div class="nav_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+               <div id="nav_center__item-1" class="nav_center__item">спорткомплексы<span class="active" id="nav_center__span-1"></span></div>
+
+               <ul class="nav_center__inner active" id="nav_center__inner_nav_1">
+                <li><a href="#">Спорткомплекс на Позняках</a></li>
+                <li><a href="#">Детский бассейн на Дарнице</a></li>
+                <li><a href="#">Крытые теннисные корты</a></li>
+                <li><a href="#">Плавательная арена на Осокорках</a></li>
+                <li><a href="#">Батутный комплекс "Планета Спорт"</a></li>
+                <li><a href="#">Спорткомплекс на Соломенке</a></li>
+                <li><a href="#">Спорткомплекс на Троещине</a></li>
+                <li><a href="#">Спорткомплекс г. Казатин</a></li>
+                <li><a href="#">Спорткомплекс г. Херсон</a></li>
+                <li><a href="#">Спорткомплекс г. Александрия</a></li>
+                <li><a href="#">Спорткомплекс АРК г. Симферополь</a></li>  
+            </ul>
+
+               <div id="nav_center__item-2" class="nav_center__item">тренеры<span id="nav_center__span-2"></span></div>
+
+                <ul class="nav_center__inner" id="nav_center__inner_nav_2">
+                    <li><a href="#">Михаил Лоботюк</a></li>
+                    <li><a href="#">Ольга Соколова</a></li>
+                    <li><a href="#">Андрей Островский</a></li>
+                    <li><a href="#">Татьяна Симанович</a></li>
+                    <li><a href="#">Валентин Зорин</a></li>
+                    <li><a href="#">Давид Мшмавидзе</a></li>
+                    <li><a href="#">Альберт Леонов</a></li>
+                </ul>
+
+               <div id="nav_center__item-3" class="nav_center__item">экстрим<span id="nav_center__span-3"></span></div>
+
+               <ul class="nav_center__inner" id="nav_center__inner_nav_3">
+                    <li><a href="#">Прыжки с парашюта</a></li>
+                    <li><a href="#">Велоезда</a></li>
+                    <li><a href="#">Альпинизм</a></li>
+                    <li><a href="#">Горнолижный спорт</a></li>
+                    <li><a href="#">Дайвинг</a></li>
+                    <li><a href="#">Сноубординг</a></li>
+                </ul>
+
+            </div>
+        </div>   
+    </nav>
+
+    <section>
+        <div class="container main">
+                   <div class="main-content">
+                            <h2>Новые современные теннисные 
+корты с грунтовым покрытием
+                            </h2>
+                            <div class="main_row">
+                                <div>Позняки</div>
+                                <div>ул. Драгоманова, 27а</div>
+                                <div>(044) 570 21 65</div>
+                                <div>Пн.-Вс 07.00-22.00</div>
+                            </div>
+                        <nav>
+                            <div><a href="#" >о клубе</a></div>
+                            <div><a href="#" >правила</a></div>
+                            <div><a href="#" >стоимость</a></div>
+                            <div><a href="#" >расписание</a></div>
+                            <div><a href="#" >тренеры</a></div>
+                            <div><a href="#">фотографии</a></div>
+                        </nav>
+                        <h3>В мае 2010 года в нашем клубе "Планета спорт" состоялось открытие 5 крытых теннисных кортов. Это новые современные теннисные корты с грунтовым покрытием.
+                        </h3>
+                        <p>Уникальность наших кортов сотоит в том, что у нас, благодаря конструктивному решению, Вы сможете заниматься теннисом в любую погоду - будь-то дождь или снег, жара или мороз. На наших теннисных кортах Вы всегда будете находиться в комфортных условиях. Для нас - это не проблема!
+                        </p>
+                        <div class="main_photo"></div>
+                        <p>В нашем клубе Вы приобретете неоценимый опыт игры в большой теннис, игры, которая постепенно завоевывает любовь огромного количества людей по всему миру. Мы приглашаем Вас принять неотъемлемое участие и познать азы и секреты этой увлекательной игры.</p>
+                        <p>У нас в клубе созданы все условия для обучение большому теннису как для детей, так и для взрослых. Каждому из Вас будет уделено должное внимание. Гибкий график выстроенных для Вас тренировок позволит Вам получить массу положительных эмоций и впечатлений. Тренерский состав  нашего клуба приложит все усилия, чтобы Ваши возможности совпали с ожидаемыми желаниями.</p>
+                        <p>Приходите к нам и Вы попадете в мир увлекательной игры, игры, которая Вас обязательно заинтригует и затянет своим азартом, подробнее...</p>
+                    </div>
+                    <div class="aside-content">
+                        <h3>Популярные карты</h3>
+                        <div class="aside_item">
+                            <div></div>
+                            <h3>Детский абонемент</h3>
+                            <p>Хотите, чтобы Ваш ребенок рос здоровым и получил радость общения с водой? Подарите малышу эту возможность
+                            </p>
+                            <div>
+                                <p>1 600 <span>грн</span>      
+<span>30 посещений</span>
+                                </p>
+                                <button>
+                                    <a href="#" >заказать сейчас</a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="aside_item">
+                                <div></div>
+                                <h3>Аквайога</h3>
+                                <p>Безопасная и адаптивная Аква Йога предлагает мощную растяжку, олицетворяя собой аутентичную практику Йоги с ее неотъемлемыми чертами
+                                </p>
+                                <div>
+                                    <p>4 100 <span>грн</span>
+<span>1 год 75 занятий</span>
+                                    </p>
+                                    <button>
+                                            <a href="#" >заказать сейчас</a>
+                                        </button>
+                                </div>
+                            </div>
+
+                        <div class="aside_item">
+                            <div></div>
+                            <h3>Аквайога для беременных</h3>
+                            <p>Безопасная и адаптивная Аква Йога предлагает мощную растяжку, олицетворяя собой аутентичную практику Йоги с ее неотъемлемыми чертами
+                                </p>
+                            <div>
+                                <p>4 100 <span>грн</span>
+<span>1 год 75 занятий</span>
+                                </p>
+                                <button>
+                                        <a href="#" >заказать сейчас</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+<section>
+    <div class="container subscribe" id="subscribeForm">
+        <div class="subscribe__aside-img"><i class="far fa-envelope"></i></div>
+        <div class="subscribe__main-content">
+            <h2>подпишитесь на e-mail рассылку и получите бонус в рамере 500 грн!</h2>
+            <div class="subscribe__main-content-wrpapper">
+                <div class="subscribe__main-content-text">
+                    Подписываясю на рассылку, Вы соглашаетесь на получение актуальной информации о предложениях и акциях компании "Планета Спорт".
+                    Мы обязуемся обеспечить, чтобы переданная Вами информация не будет передана третьим лицам.
+                    Вы можете отписаться от рассылки в любое время.  
+                    <p>*Принимая соглашение, Вы подтверждаете, что ознакомились с условиями, указанными в пункте "Правила хранения личной информации".</p>
+                </div>
+                <div class="subscribe__main-content-form">
+                    <button id="openForm">подписаться</button>
+                </div>
+            </div>
+        </div>
+        <div class="subscribe__form-wrapper hidden" id="subscribeWindow">
+            <div class="subscribe__form">
+                <form id="registrationform">
+
+                    <div class="subscribe__input-wrapper">
+                        <input type="text" name="user-name" required id="userName" placeholder="Ваше имя *" autocomplete="off">
+                        <ul class="message"></ul>
+                    </div>
+
+                    <div class="subscribe__input-wrapper">
+                        <input type="text" name="user-email" required id="userEmail" placeholder="Ваш email *" autocomplete="off">
+                        <ul class="message"></ul>
+                    </div>
+
+                    <div class="subscribe__input-wrapper">
+                        <input type="text" name="user-phone" required id="userPhone" placeholder="Ваше телефон *" autocomplete="off">
+                        <ul class="message"></ul>
+                    </div>
+
+                    <textarea name="feedback" rows="5" placeholder="Отзыв"></textarea>
+                    <p><i>* пункты, обязательные для заполнения</i></p>
+                    <input type="submit" value="Подписаться">
+                </form>
+                <button id="closeForm">X</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button class="subscribe" id="subscribeButton"><i class="far fa-envelope"></i></button>
+
+    <section>
+        <div class="container news">
+            <h3>Что нового?</h3>
+            <div class="row">
+                <div class="new_item">
+                    <div></div>
+                    <h4>новости</h4>
+                    <h3>Занятия для беременных!</h3>
+                    <p>Приглашаем на новую услугу нашего комплекса-занятия для беременных! 
+                    Это наиболее приемлемая альтернатива активному фитнесу!
+                    </p>
+                    <p>Запись на занятие проходит предварительно!</p>
+
+                    <div></div>
+                </div>
+                <div class="new_item">
+                        <div></div>
+                        <h4>объявление</h4>
+                        <h3>Спортивная группа по 
+плаванию на Соломенке</h3>
+                        <p>Проводится набор в спортивную группу по плаванию!
+                        </p>
+
+                        <div></div>
+                </div>
+                <div class="new_item">
+                        <div></div>
+                        <h4>акции</h4>
+                        <h3>Прыжки на батутах 
+60 грн. / час*</h3>
+                        <p>Постоянное акционное предложение для прыжков на батутах. 60 грн. / час* С понедельника по пятницу с 9.00 до 15.00
+                        </p>
+
+                        <div></div>
+                </div>
+                <div class="new_item">
+                        <div></div>
+                        <h4>статьи</h4>
+                        <h3>Лечебное плавание с 
+диагнозом ДЦП</h3>
+                        <p> Плавающте дети болеют в 3 раза реже, чем их сверстники, значительно лучше
+                        развиваются, отличаются повышенной двигательной активностью.
+                        </p>
+
+                        <div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer">
+            <div class="row">
+                <div class="column">
+                   <span>Мы в социальных сетях</span>
+                   <a title="Facebook" href="" target="_blank" onclick="return false"><i class="fab fa-facebook-f"></i></a>
+                   <a title="VK" href="" target="_blank" onclick="return false"><i class="fab fa-vk"></i></a>
+                   <a title="Twitter" href="" target="_blank" onclick="return false"><i class="fab fa-twitter"></i></a>
+                   <a title="Youtube" href="" target="_blank" onclick="return false"><i class="fab fa-youtube"></i></a>
+                   <a title="Instagram" href="" target="_blank" onclick="return false"><i class="fab fa-instagram"></i></a>
+                 </div>
+            </div>
+            <div class="row">
+                <span>2006 - 2016 &copy</span> 
+                <span>Планета спорт</span>
+               
+                <span> <a href="#" onclick="return false">Правила хранения личной информации</a></span>
+            </div>
+        </div>
+    </footer>
+
+<script src="js/toggle-navigation.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/toggle-navigation-mobile.js"></script>
+<script src="js/form-validation.js"></script>
+<script>
+    let emptyLinks = document.querySelectorAll('a[href="#"]');
+    for(let link of emptyLinks) {
+        link.onclick = ()=>{return false};
+    }
+</script>
+<script>
+var map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 50.449305, lng: 30.474592},
+            zoom: 16
+      });
+    }
+   
+</script>
+<script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Y3U4FwgQQoED1ntpeE5Od3kJV7S0x50&callback=initMap">
+   
+</script>
+
+</body>
+</html>

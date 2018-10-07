@@ -1,0 +1,189 @@
+.nav_center {
+    display: flex;
+    position: relative;
+    background: rgba(248, 241, 235, 1);
+    width: 100vw;
+    align-items: center;
+    .nav_toggle {
+        position: relative;
+        height: 24px;
+        width: 30px;
+        margin: 0;
+        padding: 0;
+        display: none;
+        span {
+            position: absolute; 
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: black;
+            border: none;
+            left: 0;
+            border-radius: 2px;
+        }
+        span:nth-of-type(1) {
+            top: 0;
+        }
+        span:nth-of-type(2) {
+            top: 10px;
+        }
+        span:nth-of-type(3) {
+            top: 20px;
+        }
+    }
+    .nav_center__inner {
+        position: absolute; 
+        visibility: hidden;
+        opacity: 0;
+        top: 6.5vw;
+        width: 24.35vw;
+        border-right: 1px solid rgba(235, 235, 235, 1);
+        transition: opacity .3s ease-out;
+        z-index: 100;
+    }
+    .nav_center__inner.active {
+        visibility: visible;
+        opacity: 1;
+    }
+    li {
+        transform: scale(1, .875);
+        height: 5vw;
+        display: flex;
+        align-items: center;
+        border-right: 4px solid transparent;
+        a {
+            display: block;
+            width: 24.35vw;
+            height: 4vw;
+            padding-top: .875vw;
+            line-height: 4vw;
+            padding-left: 3.35vw;
+            color: rgba(111, 111, 111, 1);
+            text-transform: none;
+            font: 15px $headerFont;
+            letter-spacing: .00vw; 
+            &:hover {
+                color: rgba(38, 38, 38, 1);
+                
+            }
+        }
+    &:hover {
+        border-right: 4px solid $colorHeaderText;
+    }
+    }
+   &>a {
+       color: inherit;
+   } 
+    &>div{
+        position: relative;
+        color: rgba(162, 157, 153, 1);
+        font: 1.2vw $headerFont;
+        @extend %ChangeToUppercase;
+        padding: 1vw 0;
+        letter-spacing: .05vw;
+        cursor: pointer;
+        &:hover {
+            color:rgba(27, 27, 27, 1);
+        }
+        span {
+            position: absolute;
+            display: none;
+            border: 12px solid transparent; 
+            border-top: 12px solid rgba(248, 241, 235, 1);
+            top: 3.5vw;
+            left: calc(50% - 8px);
+            z-index: 100;
+        }
+        span.active {
+            display: block;
+        }
+    }
+    &>div:nth-of-type(1) {
+        margin-left: 3.44vw;
+    }
+    &>div:nth-of-type(2) {
+        margin-left: 5vw;
+    }
+    &>div:nth-of-type(3) {
+        margin-left: 5vw;
+    }
+    &>div:nth-of-type(4) {
+        margin-left: 4.8vw;
+    }
+    &>div:nth-of-type(5) {
+        margin-left: 5.2vw;
+    }
+}
+@media (max-width: 950px) {
+    .nav_center {
+        &>div{
+            font: 1.7vw "Roboto", sans-serif;
+        }
+        li{
+        height: 5vw;
+            a{
+                height: 5vw;
+                line-height: 5vw;
+                font: 1.5vw "Roboto", sans-serif;
+            }
+        }
+    }
+}
+@media (max-width: 770px) {
+    .nav_center {
+        padding: 1vw 0 ;
+        flex-wrap: wrap;
+        .nav_toggle {
+            display: block;
+        }
+        &>div{
+            font: 1.7vw "Roboto", sans-serif;
+            span.active {
+                display: none;
+            }
+        }
+        &>div:not(.nav_toggle) {
+          display: none;
+          width: 100vw;
+          font: 2.5vw "Roboto", sans-serif;
+          text-align: center;
+          &.displayBlock {
+              display: block;
+          }
+        }
+        .nav_center__inner {
+            top: 23vw;
+            width: 80vw;
+        }
+        li {
+            height: 7vw;
+            a {
+                height: 7vw;
+                width: 80vw;
+                line-height: 7vw;
+                font: 2.5vw "Roboto", sans-serif;
+            }
+        }
+    }
+}
+@media (max-width: 498px) {
+    .nav_center {
+        width: auto;
+        background: transparent;
+        &>div:not(.nav_toggle) {
+            font: 18px  "Roboto", sans-serif;
+            min-width: 350px;
+        }
+    .nav_center__inner {
+        top: 130px;
+        min-width: 350px;
+    }
+    li {
+        height: 50px;
+        a {
+            font: 18px "Roboto", sans-serif;
+        }
+    }
+    }
+}
+ 

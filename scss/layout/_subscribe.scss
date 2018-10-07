@@ -1,0 +1,241 @@
+.container{
+    &.subscribe {
+        background: #2E2E2E;
+        padding: 50px 100px;
+        display: flex;
+        .subscribe__aside-img {
+            margin: 0 20px;
+            i {
+                background: snow;
+                font-size: 40px;
+                padding: 15px;
+                border-radius: 50%;
+            }
+        }
+        .subscribe__main-content {
+            h2 {
+                text-transform: uppercase;
+                color: snow;
+                font: 18px $headerFont;
+                font-weight: 600;
+            }
+            .subscribe__main-content-wrpapper {
+                display: flex;
+                .subscribe__main-content-text {
+                    color: azure; 
+                    font: 14px $headerFont;
+                    font-weight: 300;
+                    margin-top: 10px;
+                    p {
+                        font: 10px $headerFont;
+                        margin-top: 10px;
+                    }
+                }
+                .subscribe__main-content-form {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    button {
+                        height: 40px;
+                        color: white;
+                        background: $colorHeaderText;
+                        border: 4px solid  $colorHeaderText;
+                        font: 12px "Roboto", sans-serif;
+                        padding: 0 50px;
+                        margin-left: 30px;
+                        text-transform: uppercase;
+                        transition: .5s;
+                        &:hover {
+                            cursor: pointer;
+                            background: white;
+                            color:  $colorHeaderText;
+                        }
+                    }
+                }
+            }
+        }
+        .subscribe__form-wrapper {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .25);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+            transform: scale(0) translateY(-1000px) translateX(-1000px);
+            z-index: 999;
+            .subscribe__form {
+                background:  #2E2E2E;
+                width: 375px;
+                position: relative;
+                border-radius: 10px;
+                padding: 15px;
+                input, p, textarea  {
+                    display: block;
+                    width: 90%;
+                    margin: 0 auto;
+                    font: 14px $headerFont;
+                    font-weight: 900;
+                }
+                input {
+                    height: 40px;
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    border: 1px solid rgba(0, 0, 0, .5);
+                    padding: 10px;
+                    background: white;
+                    outline: none;
+                    &:focus {
+                        border: 2px solid $colorHeaderText;
+                    }
+                }
+                p {
+                    font: 12px $headerFont;
+                    color: white;
+                }
+                textarea {
+                    font: 14px $headerFont;
+                    margin-top: 20px;
+                    border-radius: 5px;
+                    font-weight: 900;
+                    padding: 10px;
+                    resize: none;
+                    background: white;
+                    outline: none;
+                    &:focus {
+                        border: 2px solid $colorHeaderText;
+                    }
+                }
+                input[type=submit] {
+                    width: auto;
+                    margin: 0 auto;
+                }
+                input[type=submit] {
+                        height: 40px;
+                        color: white;
+                        background: $colorHeaderText;
+                        border: 4px solid  $colorHeaderText;
+                        font: 12px "Roboto", sans-serif;
+                        padding: 0 50px;
+                        text-transform: uppercase;
+                        transition: .5s;
+                        border-radius: 0px;
+                        margin-top: 20px;
+                    &:hover {
+                        cursor: pointer;
+                        background: white;
+                        color:  $colorHeaderText;
+                    }
+                }
+                button {
+                    position: absolute;
+                    top: 13px;
+                    right: 13px;
+                    background: transparent;
+                    color: $colorHeaderText;
+                    border: none;
+                    font-size: 20px;
+                    font-weight: 600;
+                    &:hover {
+                        cursor: pointer;
+                        color: white;
+                    }                
+                }
+                .subscribe__input-wrapper {
+                    position: relative;
+                    &.error {
+                        input {
+                            border: 3px solid rgba(255, 0, 0, .5);
+                        }
+                    }
+                    &.success {
+                        input {
+                            border: 3px solid rgba(102, 255, 0, .5);
+                        }                  
+                    }
+                    &>ul.error {
+                        position: absolute;
+                        top: 50px;
+                        left: 17px;
+                        width: 90%;
+                        background: white;
+                        border: 3px solid rgba(74, 175, 245, 1);
+                        border-radius: 5px;
+                        padding: 15px 20px;
+                        z-index: 999;
+                        padding-left: 30px;
+                        li {
+                            list-style: disc;
+                            font: 13px "Roboto", sans-serif;
+                            margin-bottom: 5px;
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        &:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: -13px;
+                            left: 130px;
+                            border-left: 10px solid transparent;
+                            border-right: 10px solid transparent;
+                            border-bottom: 10px solid rgba(74, 175, 245, 1);
+                        }
+                    }    
+                }
+                &.dataSent {
+                    background: white;
+                    width: 80%;
+                    text-align: center;
+                    border: 3px solid rgba(74, 175, 245, 1);
+                    &>div {
+                        color: #2E2E2E;
+                        font: 20px "Roboto", sans-serif;
+                    }  
+                }      
+            }
+        &.hidden {
+            display: none;
+        }    
+        }
+    }
+} 
+@media (max-width: 871px) {
+    .container.subscribe {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 25px 80px;
+        .subscribe__aside-img {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+        .subscribe__main-content {
+            h2 {
+                text-align: center;
+            }
+            .subscribe__main-content-wrpapper {
+                flex-wrap: wrap;
+                justify-content: center;
+                .subscribe__main-content-text {
+                    text-align: center;
+                    margin-top: 5px;
+                    p {
+                        margin-top: 5px;
+                    }
+                }
+                .subscribe__main-content-form {
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 770px)  {
+    .container.subscribe {
+        padding: 25px;
+    }
+}

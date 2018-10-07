@@ -1,0 +1,6 @@
+@mixin header_background($name, $position, $size, $repeat) {
+    background-image: url(../img/#{$name}.svg);
+    background-position: $position;
+    background-size: $size;
+    background-repeat: $repeat;
+}
